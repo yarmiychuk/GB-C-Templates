@@ -204,7 +204,7 @@ int[] Fibonacci(int size, int a, int b)
 Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 */
 
-int[,] CreateDRandom2DArray(int rows, int columns, int minValue, int maxValue)
+int[,] CreateRandom2DArray(int rows, int columns, int minValue, int maxValue)
 {
     int[,] newArray = new int[rows, columns];
     for (int i = 0; i < rows; i++)
