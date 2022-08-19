@@ -204,7 +204,7 @@ int[] Fibonacci(int size, int a, int b)
 Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
 */
 
-int[,] CreateDRandom2DArray(int rows, int columns, int minValue, int maxValue)
+int[,] CreateRandom2DArray(int rows, int columns, int minValue, int maxValue)
 {
     int[,] newArray = new int[rows, columns];
     for (int i = 0; i < rows; i++)
@@ -221,7 +221,7 @@ void Show2DArray(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; i < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             Console.Write(array[i, j] + " ");
         }
@@ -266,7 +266,7 @@ int[,] EvenArray(int[,] array)
     return array;
 }
 
-int[,] array5 = CreateDRandom2DArray(5, 5, 0 , 9);
+int[,] array5 = CreateRandom2DArray(5, 5, 0, 9);
 Show2DArray(array5);
 array5 = EvenArray(array5);
 Show2DArray(array5);
@@ -287,7 +287,7 @@ int GetSumOfDiagonal(int[,] array)
     return sum;
 }
 
-int[,] array6 = CreateDRandom2DArray(5, 5, 0 , 9);
+int[,] array6 = CreateRandom2DArray(5, 5, 0, 9);
 Show2DArray(array6);
 array5 = EvenArray(array6);
 Show2DArray(array6);
@@ -332,7 +332,7 @@ int[,] ReverseRowsCols(int[,] array)
 }
 
 // Сразу Квадратный
-int[,] array9 = CreateDRandom2DArray(5, 5, rnd.Next(5, 9), rnd.Next(5, 9));
+int[,] array9 = CreateRandom2DArray(5, 5, rnd.Next(5, 9), rnd.Next(5, 9));
 Show2DArray(array9);
 int[,] array10 = ReverseRowsCols(array9);
 Show2DArray(array10);
@@ -386,7 +386,7 @@ int[,] RemoveMinimumm(int[,] array)
     return newArray;
 }
 
-int[,] array7 = CreateDRandom2DArray(rnd.Next(0, 9), rnd.Next(0, 9), rnd.Next(5, 9), rnd.Next(5, 9));
+int[,] array7 = CreateRandom2DArray(rnd.Next(0, 9), rnd.Next(0, 9), rnd.Next(5, 9), rnd.Next(5, 9));
 Show2DArray(array7);
 int[,] array8 = RemoveMinimumm(array7);
 Show2DArray(array8);
