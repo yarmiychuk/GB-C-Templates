@@ -427,3 +427,45 @@ int SumOfDigits(int n)
 Console.Write("Введите число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"Сумма цифр равна {SumOfDigits(num2)}");
+
+/*
+Задайте значения M и N. Напишите программу,
+которая выведет все натуральные числа в промежутке от M до N.
+*/
+
+void ShowNumsForward(int min, int max)
+{
+    if (min != max) ShowNumsForward(min, max - 1);
+    Console.Write(max + " ");
+}
+
+void ShowNumsBack(int max, int min)
+{
+    Console.Write(max + " ");
+    if (min != max) ShowNumsBack(max - 1, min);
+}
+
+Console.Write("Введите первое число: ");
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второе число: ");
+int number2 = Convert.ToInt32(Console.ReadLine());
+
+if (number1 < number2) ShowNumsForward(number1, number2);
+else ShowNumsBack(number1, number2);
+
+/*
+Напишите программу, которая на вход принимает два числа A и B,
+и возводит число А в целую степень B с помощью рекурсии.
+*/
+
+int Pow(int a, int b)
+{
+    if (b != 0) return a * Pow(a, b - 1);
+    return 1;
+}
+
+Console.Write("Введите число: ");
+int num3 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите степень: ");
+int num4 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(Pow(num3, num4));
